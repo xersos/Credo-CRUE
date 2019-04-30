@@ -12,6 +12,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { GridPresse } from './home/grid-presse/grid-presse.component';
+import { ArticleComponent } from './articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GridPresse } from './home/grid-presse/grid-presse.component';
     HeaderComponent,
     SidenavListComponent,
     FooterComponent,
-    GridPresse
+    GridPresse,
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,
