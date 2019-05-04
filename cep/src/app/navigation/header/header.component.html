@@ -1,27 +1,63 @@
 <img class="banner" src="assets/img/banner.png">
-<mat-toolbar color="primary">
-    <div fxHide.gt-xs>
-        <button mat-icon-button (click)="onToggleSidenav()">
-            <mat-icon>menu</mat-icon>
-        </button>
-    </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xl>
-        <ul fxLayout fxLayoutGap="35px" class="navigation-items">
-            <li>
-                <a routerLink="/Accueil">Accueil</a>
-            </li>
-            <li>
-                <a routerLink="/Articles">Articles</a>
-            </li>
-            <li>
-                <a routerLink="/Appel aux témoins">Appel aux témoins</a>
-            </li>
-            <li>
-                <a routerLink="/Ressources">Ressources</a>
-            </li>
-            <li>
-                <a routerLink="/A_propos">A propos</a>
-            </li>
-        </ul>
-    </div>
-  </mat-toolbar>
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo lighten-1" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">Accueil</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect>Articles<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Appel aux témoins</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Ressources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>À propos</a>
+        </li>
+  
+        <div class="dropdown" mdbDropdown>
+
+
+          <button mdbDropdownToggle mdbBtn color="primary" class="dropdown-toggle waves-light" type="button"
+            mdbWavesEffect>
+            Dropdown primary
+          </button>
+        
+        
+          <div class="dropdown-menu dropdown-primary">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+  
+      </ul>
+     
+  
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link">1 <mdb-icon fas icon="envelope"></mdb-icon></a>
+        </li>
+        <li class="nav-item avatar dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" class="img-fluid rounded-circle z-depth-0"></a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->

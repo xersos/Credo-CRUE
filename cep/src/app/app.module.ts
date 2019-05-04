@@ -9,7 +9,6 @@ import {LayoutComponent} from './layout/layout.component';
 import {HomeComponent} from './home/home.component';
 import {RoutingModule} from './routing/routing.module';
 import {HeaderComponent} from './navigation/header/header.component';
-import {SidenavListComponent} from './navigation/sidenav-list/sidenav-list.component';
 import {FooterComponent} from './navigation/footer/footer.component';
 import {GridPresse} from './home/grid-presse/grid-presse.component';
 import {LoginComponent} from './login/login.component';
@@ -20,6 +19,8 @@ import {MatCardModule, MatInputModule, MatProgressSpinnerModule} from '@angular/
 import {LoaderComponent} from './loader/loader.component';
 import {LoaderService} from './services/loader/loader.service';
 import {LoaderInterceptor} from './interceptors/loader/loader.interceptor';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +28,6 @@ import {LoaderInterceptor} from './interceptors/loader/loader.interceptor';
     LayoutComponent,
     HomeComponent,
     HeaderComponent,
-    SidenavListComponent,
     FooterComponent,
     GridPresse,
     LoginComponent,
@@ -35,6 +35,7 @@ import {LoaderInterceptor} from './interceptors/loader/loader.interceptor';
   ],
   imports: [
     BrowserModule,
+    MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,

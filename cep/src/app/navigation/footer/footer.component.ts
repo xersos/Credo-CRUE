@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,15 +7,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  @Output() public sidenavToggle = new EventEmitter();
-
   constructor() { }
 
   ngOnInit() {
   }
 
-  public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
-  }
 
 }
