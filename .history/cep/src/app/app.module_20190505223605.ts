@@ -21,7 +21,16 @@ import {LoaderService} from './services/loader/loader.service';
 import {LoaderInterceptor} from './interceptors/loader/loader.interceptor';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+export const createTranslateLoader = (http: HttpClient) => {
+  return new TranslateHttpLoader(
+      http,
+      '/start-javascript/sb-admin-material/master/dist/assets/i18n/',
+      '.json'
+  );
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+};
 
 
 @NgModule({
@@ -48,6 +57,13 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
     MatInputModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: createTranslateLoader,
+          deps: [HttpClient]
+      }
+    })
   ],
   providers: [LoaderService,
     {provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true}
