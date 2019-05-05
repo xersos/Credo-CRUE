@@ -24,12 +24,11 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export const createTranslateLoader = (http: HttpClient) => {
-  /* for development
   return new TranslateHttpLoader(
       http,
       '/start-javascript/sb-admin-material/master/dist/assets/i18n/',
       '.json'
-  );*/
+  );
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 };
 
