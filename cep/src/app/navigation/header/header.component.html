@@ -1,17 +1,17 @@
 <img class="banner" src="assets/img/banner.png">
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo lighten-1" [containerInside]="false">
+<mdb-navbar SideClass="navbar justify-content-center navbar-expand-lg navbar-dark indigo lighten-1" [containerInside]="false">
 
     <!-- Navbar brand -->
-    <mdb-navbar-brand><a class="navbar-brand" href="#">Accueil</a></mdb-navbar-brand>
+    <mdb-navbar-brand><a class="navbar-brand"  href="/home">Accueil</a></mdb-navbar-brand>
   
     <!-- Collapsible content -->
     <links>
   
       <!-- Links -->
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav  mr-auto">
         <li class="nav-item active">
-          <a class="nav-link waves-light" mdbWavesEffect>Articles<span class="sr-only">(current)</span></a>
+          <a class="nav-link waves-light" href="/articles" mdbWavesEffect>Articles<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link waves-light" mdbWavesEffect>Appel aux témoins</a>
@@ -30,13 +30,13 @@
 
         <button mdbDropdownToggle mdbBtn color="primary" class="dropdown-toggle waves-light" type="button"
           mdbWavesEffect>
-          Français
+          <img src="../../../assets/img/fr.png" class="img-fluid" alt="Responsive image">   Français
         </button>
       
       
         <div class="dropdown-menu dropdown-primary">
-          <a class="dropdown-item" href="#">Anglais</a>
-          <a class="dropdown-item" href="#">Tahitien</a>
+          <a class="dropdown-item" href="#"> <img src="../../../assets/img/en.png" class="img-fluid" alt="Responsive image">Anglais</a>
+          <a class="dropdown-item" href="#"> <img src="../../../assets/img/tahiti.png" class="img-fluid" alt="Responsive image">Tahitien</a>
         </div>
       </div>
     </links>
